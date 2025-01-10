@@ -63,7 +63,9 @@ function App() {
           Color<span className="text-green-100">Generator</span>
         </h1>
         <div className=" flex items-center gap-2 md:col-span-3 sm:col-start-3 sm:col-span-2 sm:pt-0 pt-5 col-start-1">
-          <label className="text-green-100 font-medium" htmlFor="models">Model:</label>
+          <label className="text-green-100 font-medium" htmlFor="models">
+            Model:
+          </label>
           <select
             name="models"
             value={selectedModel}
@@ -85,11 +87,10 @@ function App() {
       </header>
       {loading ? (
         <div className="relative h-96">
-        <span className="loading loading-dots loading-lg text-green-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2"></span>
-      </div>
-      
+          <span className="loading loading-dots loading-lg text-green-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2"></span>
+        </div>
       ) : (
-        <div className="mt-5 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 shadow-md overflow-visible">
+        <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 shadow-md md:pb-0 mb-20">
           {colors.map((color, i) => (
             <ColorCard key={i} color={color} />
           ))}
